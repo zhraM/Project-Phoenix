@@ -1,5 +1,6 @@
 from models.book import Book
 from models.member import Member
+from models.loan import Loan
 def main():
     book = Book(
         "Clean Code",
@@ -20,6 +21,9 @@ def main():
     
     member = Member("Shokat", 103)
     member.display_info()
+    
+    loan = Loan(book, member, "2026-08-09", "2026-08-23")
+    loan.display_info()
     
     
 if __name__ == "__main__":

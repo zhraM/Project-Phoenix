@@ -23,3 +23,6 @@ class Book:
             print("Book is already available.")
         else:
             self.available = True
+    
+    def __str__(self):
+        return self.title
