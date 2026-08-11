@@ -37,7 +37,13 @@ def main():
     print(library.books)
     print(library.members)
     print(library.loans)
+    library.add_loan(loan)
     
+    library.return_book(loan)
+    print(book.available)
+    print(library.loans)
+    library.return_book(loan)
+
     
 if __name__ == "__main__":
     main()

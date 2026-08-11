@@ -11,10 +11,21 @@ class Library:
         self.members.append(member)
     
     def add_loan(self, loan):
-        self.loans.append(loan)
+        if loan.book.available:
+            self.loans.append(loan)
+        loan.book.borrow()
         
     def remove_book(self, book):
         self.books.remove(book)
     
     def remove_member(self, member):
         self.members.remove(member)
+        
+    def return_book(self, loan):
+        if not loan.book.available:
+            self.loans.remove(loan)
+        loan.book.return_book()
+        
+        
+        
+        
