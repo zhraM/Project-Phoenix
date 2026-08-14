@@ -43,6 +43,17 @@ def main():
     print(book.available)
     print(library.loans)
     library.return_book(loan)
+    
+    book1 = Book(
+        "Just for check",
+        "No One",
+        "6273874983903"
+    )
+    member1 = Member("Zizi", "450")
+    loan1 = Loan(book1, member, "2026-08-09", "2026-08-23")
+    loan2 = Loan(book, member1, "2026-08-09", "2026-08-23")
+    library.add_loan(loan1)
+    library.add_loan(loan2)
 
     
 if __name__ == "__main__":

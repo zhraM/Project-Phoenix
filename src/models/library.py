@@ -11,9 +11,17 @@ class Library:
         self.members.append(member)
     
     def add_loan(self, loan):
-        if loan.book.available:
-            self.loans.append(loan)
+        if not loan.book in self.books:
+            print("Book is not in the library.")
+            return
+        if not loan.member in self.members:
+            print("Member is not registered.")
+            return
+        if not loan.book.available:
+            print("Book is already borrowed.")
+            return
         loan.book.borrow()
+        self.loans.append(loan)
         
     def remove_book(self, book):
         self.books.remove(book)
