@@ -49,12 +49,18 @@ def main():
         "No One",
         "6273874983903"
     )
-    member1 = Member("Zizi", "450")
+    member1 = Member("Zizi", 450)
     loan1 = Loan(book1, member, "2026-08-09", "2026-08-23")
     loan2 = Loan(book, member1, "2026-08-09", "2026-08-23")
     library.add_loan(loan1)
     library.add_loan(loan2)
 
+    found_book = library.find_book("9780132350884")
+    print(found_book)
+    found_member = library.find_member(103)
+    print(found_member)
+    library.find_book("111111")
+    library.find_member(999)
     
 if __name__ == "__main__":
     main()

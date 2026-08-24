@@ -34,6 +34,15 @@ class Library:
             self.loans.remove(loan)
         loan.book.return_book()
         
-        
-        
+    def find_book(self, isbn):
+        for book in self.books:
+            if book.ISBN == isbn:
+                return book
+        print("Book not found.")
+            
+    def find_member(self, ID):
+        for member in self.members:
+            if member.member_ID == ID:
+                return member
+        print("Member not found.")
         
