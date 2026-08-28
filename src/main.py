@@ -65,5 +65,10 @@ def main():
     
     library.display_info()
     
+    print(library.find_loan_by_book(book))
+    loans = library.find_loans_by_member(member)
+    for loan in loans:
+        print(loan)
+    
 if __name__ == "__main__":
     main()

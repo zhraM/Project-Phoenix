@@ -56,3 +56,17 @@ class Library:
         print("#Loans:")
         for loan in self.loans:
             print(loan)
+    
+    def find_loan_by_book(self, book):
+        for loan in self.loans:
+            if loan.book == book:
+                return loan
+        print("Loan not found.")
+
+    def find_loans_by_member(self, member):
+        member_loans = []
+        for loan in self.loans:
+            if loan.member == member:
+                member_loans.append(loan)
+        return member_loans
+    
