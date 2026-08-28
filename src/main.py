@@ -43,6 +43,7 @@ def main():
     print(book.available)
     print(library.loans)
     library.return_book(loan)
+    library.add_loan(loan)
     
     book1 = Book(
         "Just for check",
@@ -61,6 +62,8 @@ def main():
     print(found_member)
     library.find_book("111111")
     library.find_member(999)
+    
+    library.display_info()
     
 if __name__ == "__main__":
     main()

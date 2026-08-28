@@ -10,3 +10,6 @@ class Loan:
         print(f"Member: {self.member}")
         print(f"Borrow Date: {self.borrow_date}")
         print(f"Due Date: {self.due_date}")
+        
+    def __str__(self):
+        return f"{self.book} -> {self.member}"

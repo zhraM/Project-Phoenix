@@ -46,3 +46,13 @@ class Library:
                 return member
         print("Member not found.")
         
+    def display_info(self):
+        print("#Books:")
+        for book in self.books:
+            print(book)
+        print("#Members:")
+        for member in self.members:
+            print(member)
+        print("#Loans:")
+        for loan in self.loans:
+            print(loan)
