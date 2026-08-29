@@ -69,6 +69,31 @@ def main():
     loans = library.find_loans_by_member(member)
     for loan in loans:
         print(loan)
+        
+        
+    book2 = Book(
+        "Become SuperNatural",
+        "Joe Dispenza",
+        "98376473292"
+    )
+    book3 = Book(
+        "The Hunger Games",
+        "Suzanne Collins",
+        "87882767298"
+    )
+    library.add_book(book1)
+    library.add_book(book2)
+    library.add_book(book3)
+    loan2 = Loan(book2, member, "2026-8-26", "2026-9-10")
+    loan3 = Loan(book3, member, "2026-8-26", "2026-9-10")
+    library.add_loan(loan1)
+    library.add_loan(loan2)
+    library.add_loan(loan3)
+    loans = library.find_loans_by_member(member)
+    for loan in loans:
+            print(loan)
+    
+    
     
 if __name__ == "__main__":
     main()

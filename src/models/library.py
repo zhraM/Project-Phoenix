@@ -17,6 +17,9 @@ class Library:
         if not loan.member in self.members:
             print("Member is not registered.")
             return
+        if len(self.find_loans_by_member(loan.member)) >= 3:
+            print("Member has reached the borrowing limit.")
+            return
         if not loan.book.available:
             print("Book is already borrowed.")
             return
